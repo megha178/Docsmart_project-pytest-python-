@@ -13,6 +13,7 @@ class TestDocSmart:
     #   @allure.description("valid username and password")
     #   @pytest.mark.positive
 
+    @pytest.mark.qa
     @pytest.mark.usefixtures("setup")
     def test_invalid_login(self, setup):
         driver = setup
@@ -21,6 +22,7 @@ class TestDocSmart:
         assert loginPage.get_error_msg().is_displayed()
         allure.attach(driver.get_screenshot_as_png(), name="invalid_login", attachment_type=AttachmentType.PNG)
 
+    @pytest.mark.smoke
     @pytest.mark.usefixtures("setup")
     def test_valid_login(self, setup):
         driver = setup
