@@ -1,0 +1,1 @@
+This automatically displays all your Laboratory Reports. You may also upload a report from a laboratory not in our system.
